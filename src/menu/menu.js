@@ -416,11 +416,11 @@
         // Also check if the clicked element is a menu item
         // if so, do nothing.
         if (e !== evt && !this.closing_ && e.target.parentNode !== this.element_) {
-          document.removeEventListener('click', callback);
+          document.removeEventListener('mouseover', callback);
           this.hide();
         }
       }.bind(this);
-      document.addEventListener('click', callback);
+      document.addEventListener('mouseover', callback);
     }
   };
   MaterialMenu.prototype['show'] = MaterialMenu.prototype.show;
